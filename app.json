@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "SwipeSort",
+    "slug": "swipesort-local",
+    "scheme": "swipesort",
+    "version": "1.4.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.personal.swipesort",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "SwipeSort a besoin d'accéder aux photos pour les trier sur cet appareil.",
+        "NSPhotoLibraryAddUsageDescription": "SwipeSort a besoin de modifier les albums photo que vous validez."
+      }
+    },
+    "android": {
+      "package": "com.personal.swipesort",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#14101F"
+      },
+      "versionCode": 4
+    },
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Autoriser SwipeSort à lire les photos à trier sur cet appareil.",
+          "savePhotosPermission": "Autoriser SwipeSort à classer les photos dans vos albums.",
+          "granularPermissions": [
+            "photo"
+          ]
+        }
+      ]
+    ],
+    "extra": {
+      "privacy": "Local only. No analytics, tracking or upload."
+    }
+  }
+}
